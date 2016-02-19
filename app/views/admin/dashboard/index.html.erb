@@ -1,7 +1,83 @@
+<h2 class="lead">Dashboard</h2></hr>
+
 <div class="row">
-	<div class="col-lg-12">
-		<h1>Simple Sidebar</h1>
-		<p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-		<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+	<div class="col-md-3">
+		<div class="well">
+			<h4>Articles</h4>
+			<% if Article.all.count > 0 %>
+				<p>
+					<strong>Count: </strong> <%= link_to(Article.count('title', distinct: true), admin_articles_path) %>
+					<strong>Most Recent: </strong> <%= link_to(truncate(Article.order("created_at").last.title, 15), admin_article_path(Article.order("created_at").last)) %>
+				</p>
+			<% else %>
+				<p>No Articles created yet. Get to work</p>
+				<%= link_to("Create Article", new_admin_article_path) %> 
+			<% end %>
+		</div>
+	</div>
+	
+	<div class="col-md-3">
+		<div class="well">
+			<h4>Collected Editions</h4>
+			<p>
+				<strong>Count: </strong> coming soon
+			</p>
+		</div>
+	</div>
+	
+	<div class="col-md-3">
+		<div class="well">
+			<h4>Series</h4>
+			<p>
+				<strong>Count: </strong> coming soon
+			</p>
+		</div>
+	</div>
+	
+	<div class="col-md-3">
+		<div class="well">
+			<h4>Issues</h4>
+			<p>
+				<strong>Count: </strong> coming soon
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-3">
+		<div class="well">
+			<h4>Writers</h4>
+			<p>
+				<strong>Count: </strong> coming soon
+			</p>
+		</div>
+	</div>
+	
+	<div class="col-md-3">
+		<div class="well">
+			<h4>Pencillers</h4>
+			<p>
+				<strong>Count: </strong> coming soon
+			</p>
+		</div>
+	</div>
+	
+	<div class="col-md-3">
+		<div class="well">
+			<h4>Colorists</h4>
+			<p>
+				<strong>Count: </strong> coming soon
+			</p>
+		</div>
+	</div>
+	
+	<div class="col-md-3">
+		<div class="well">
+			<h4>Editors</h4>
+			<p>
+				<strong>Count: </strong> coming soon
+			</p>
+		</div>
 	</div>
 </div>
