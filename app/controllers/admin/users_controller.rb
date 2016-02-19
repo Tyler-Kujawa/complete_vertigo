@@ -1,5 +1,5 @@
 class Admin::UsersController < AdminController
-	
+	layout "dashboard"
 	before_filter :authorize
 	
 	def new
@@ -14,6 +14,10 @@ class Admin::UsersController < AdminController
 		else
 			render "new"
 		end
+	end
+	
+	def show
+		@user = User.first
 	end
 
 	private

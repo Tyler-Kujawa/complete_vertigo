@@ -27,7 +27,7 @@
 	</li>
 	</br>
 	<li>
-		<%= current_user.email %>
+		<%= link_to(current_user.email, admin_user_path(current_user)) %>
 	</li>
 	<li>
 		<%= render "admin/partials/authorization_menu" %>

@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<h2>
   <%= @article.title %>
+</h2>
+<hr>
+
+<p>
+  <strong>Author:</strong> <%= @article.user ? @article.user.full_name : "No associated author."%>
 </p>
 
 <%= link_to 'Edit', edit_admin_article_path(@article) %> |
