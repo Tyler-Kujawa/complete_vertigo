@@ -1,0 +1,6 @@
+<% if current_user %>
+  <%= link_to "Log Out", admin_log_out_path %>
+<% else %>
+  <%= link_to "Sign Up", admin_sign_up_path %> or
+  <%= link_to "Log In", admin_log_in_path %>
+<% end %>

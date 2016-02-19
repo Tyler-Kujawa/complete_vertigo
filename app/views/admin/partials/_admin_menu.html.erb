@@ -1,0 +1,35 @@
+<ul class="sidebar-nav">
+	<li class="sidebar-brand">
+		<a href="#">
+			Complete Vertigo
+		</a>
+	</li>
+	<li>
+		<%= link_to("Articles", admin_articles_path) %>
+	</li>
+	<li>
+		<%= link_to("Collected Editions") %>
+	</li>
+	<li>
+		<%= link_to("Series") %>
+	</li>
+	<li>
+		<%= link_to("Issues") %>
+	</li>
+	<li>
+		<%= link_to("Writers") %>
+	</li>
+	<li>
+		<%= link_to("Penciller") %>
+	</li>
+	<li>
+		<%= link_to("Colorists") %>
+	</li>
+	</br>
+	<li>
+		<%= current_user.email %>
+	</li>
+	<li>
+		<%= render "admin/partials/authorization_menu" %>
+	</li>
+</ul>
