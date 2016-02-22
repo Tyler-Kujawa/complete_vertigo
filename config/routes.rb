@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 	
   get 'home' => 'articles#index'
-
+	
 	root 'articles#index'
 
 	namespace :admin do

@@ -7,7 +7,9 @@
 			<% if Article.all.count > 0 %>
 				<p>
 					<strong>Count: </strong> <%= link_to(Article.count('title', distinct: true), admin_articles_path) %>
-					<strong>Most Recent: </strong> <%= link_to(truncate(Article.order("created_at").last.title, 15), admin_article_path(Article.order("created_at").last)) %>
+				</p>
+				<p>
+					<strong>Most Recent: </strong> <%= link_to(Article.order("created_at").last.title, admin_article_path(Article.order("created_at").last)) %>
 				</p>
 			<% else %>
 				<p>No Articles created yet. Get to work</p>

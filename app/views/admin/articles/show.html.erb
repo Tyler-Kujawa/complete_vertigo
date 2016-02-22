@@ -8,6 +8,15 @@
 <p>
   <strong>Author:</strong> <%= @article.user ? @article.user.full_name : "No associated author."%>
 </p>
+<p>
+  <strong>Header Image:</strong> 
+  <% if @article.header_image.url %>
+  	<%= image_tag @article.header_image.url %>
+  	<%= link_to 'remove', '#' %>
+  <% else %>
+  	No Header Image
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_admin_article_path(@article) %> |
 <%= link_to 'Back', admin_articles_path %>
