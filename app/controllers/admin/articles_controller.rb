@@ -64,6 +64,15 @@ class Admin::ArticlesController < AdminController
     end
   end
 
+# PATCH/PUT /articles/1
+  def remove_header_image
+    @article = Article.find(params[:id])
+    @article.header_image.destroy
+    @article.header_image = nil
+    @article.save
+    redirect_to admin_article_path(@article)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article

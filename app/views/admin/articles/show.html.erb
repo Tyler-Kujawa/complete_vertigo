@@ -9,10 +9,10 @@
   <strong>Author:</strong> <%= @article.user ? @article.user.full_name : "No associated author."%>
 </p>
 <p>
-  <strong>Header Image:</strong> 
-  <% if @article.header_image.url %>
+  <strong>Header Image:</strong>
+  <% if !@article.header_image.url.eql?("/header_images/original/missing.png") %>
   	<%= image_tag @article.header_image.url %>
-  	<%= link_to 'remove', '#' %>
+  	<%= link_to 'remove', {action: :remove_header_image, id: @article.id}, method: :patch %>
   <% else %>
   	No Header Image
   <% end %>

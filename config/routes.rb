@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 	
-  get 'home' => 'articles#index'
+  get 'home' => 'articles#homepage'
 	
-	root 'articles#index'
+	root 'articles#homepage'
 
 	namespace :admin do
 		get 'log_in' => 'sessions#new'
@@ -11,7 +11,8 @@ Rails.application.routes.draw do
 		get 'dashboard' => 'dashboard#index'
 		
 		get '/' => 'dashboard#index' 
-		
+    patch 'article/remove_header_image/:id' => 'articles#remove_header_image'
+
 		resources :articles
 		resources :users
 		resources :sessions 
