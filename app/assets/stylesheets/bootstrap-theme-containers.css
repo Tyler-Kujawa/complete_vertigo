@@ -1,0 +1,43 @@
+.jumbotron{
+	background-color: rgb(171,54,67);
+	border: 2px solid rgb(137,40,23) 
+}
+
+.jumbotron h1{
+	color: rgb(255,255,255);
+	letter-spacing: 4px;
+}
+
+.jumbotron p{
+	color: rgb(255,255,255);
+}
+
+/*.jumbotron p a{
+	color: rgb(210, 174, 35);
+}
+
+.jumbotron p a:hover{
+	color: rgb(210, 174, 35);
+	font-weight: bold;
+	text-decoration: none;
+}*/
+
+.well {
+	background-color: rgb(171,54,67);
+	border: 2px solid rgb(137,40,23) 
+}
+
+.well label{
+	color: rgb(255,255,255);
+	font-weight: lighter;
+}
+
+.well legend{
+	color: rgb(255,255,255);
+	letter-spacing: 2.5px;
+/*	font-weight: lighter;*/
+}
+
+.well .help-block{
+	color: rgb(255, 137, 42);
+}

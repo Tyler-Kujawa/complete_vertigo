@@ -1,0 +1,144 @@
+.thin-logo-text{
+	font-size: 14px;
+	color: rgb(171,54,35);
+	font-weight: lighter;
+	letter-spacing: 3px;
+}
+
+.bold-logo-text{
+	font-weight: bold;
+	font-size:28px;
+	color: rgb(137,40,23);
+}
+
+.navbar{
+	border-radius: 0px;
+	width: 100%;
+}
+
+.navbar-default {
+	background-color: rgb(255,255,255);
+}
+
+.navbar-collapse{
+	padding-right: 0;
+}
+
+.navbar-header{
+	margin-left: 45px;
+}
+
+.navbar-nav li{
+	margin-right: 25px;
+}
+
+.navbar-right ~ .navbar-right {
+	margin-right: 20px;	
+}
+
+.navbar-right:first-child{
+	margin-right: 0;
+}
+
+.subscribe-btn{
+	margin-right: 0px !important;
+}
+
+.subscribe-btn a{
+	background-color: rgb(38,137,132);
+	color: rgb(255,255,255) !important;
+}
+
+.subscribe-btn a:hover{
+	background-color:rgb(45,122,122) !important;
+}
+
+.search-btn{
+	margin:0;
+	background-color: rgb(105,125,125);
+	width:	50px;
+	height: 50px;
+}
+
+.search-btn:hover{
+	background-color: rgb(95,115,115) !important;
+}
+
+.search-icon{
+	content:url(image-path('search.png'));
+	width:100%;
+	height: auto;
+}
+
+.navbar-inverse {
+	min-height: 30px;
+	position: relative;
+	background-color: rgb(171,54,67); 
+	border-color: rgb(160,40,46);
+	margin:0;
+	z-index: 10;
+}
+
+.inverse-header-message{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.inverse-header-message p{
+	color: rgb(255,255,255);
+	font-size: 12px;
+	font-weight: lighter;
+	margin: 0;
+}
+
+.navbar-inverse-link{
+	color: rgb(210, 174, 35);
+}
+
+.navbar-inverse-link:hover{
+	color: rgb(210, 174, 35);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+}
+
+@media (max-width: 767px) {
+  .navbar .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  }
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: rgb(255,255,255);
+  background-color: rgb(38,137,132);
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 3;
+  cursor: default;
+  color: rgb(255,255,255);
+  background-color: rgb(38,137,132);
+  border-color: #337ab7;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  color: rgb(38,137,132);
+}
