@@ -1,22 +1,66 @@
 <p id="notice"><%= notice %></p>
 
-<h2>
-  <%= @article.title %>
-</h2>
-<hr>
 
-<p>
-  <strong>Author:</strong> <%= @article.user ? @article.user.full_name : "No associated author."%>
-</p>
-<p>
-  <strong>Header Image:</strong>
-  <% if !@article.header_image.url.eql?("/header_images/original/missing.png") %>
-  	<%= image_tag @article.header_image.url %>
-  	<%= link_to 'remove', {action: :remove_header_image, id: @article.id}, method: :patch %>
-  <% else %>
-  	No Header Image
-  <% end %>
-</p>
+<div class="row">
+	<div class="col-lg-12">
+		<h1>Info for Article #<%= @article.id %></h1>
+		<%= link_to 'Edit', edit_admin_article_path(@article) %> |
+		<%= link_to 'Back', admin_articles_path %>
+	</div>
+</div>
 
-<%= link_to 'Edit', edit_admin_article_path(@article) %> |
-<%= link_to 'Back', admin_articles_path %>
+<hr class="full-length">
+<br>
+
+<div class="row">
+	<div class="col-lg-12">
+		<p>
+	  		<strong>Title:</strong> <%= @article.title %>
+		</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<p>
+		  <strong>Author:</strong> <%= @article.user ? @article.user.full_name : "No associated author."%>
+		</p>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<p>
+			<strong>Header Image:</strong>
+		</p>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		
+		<% if !@article.header_image.url.eql?("/header_images/original/missing.png") %>
+			<p>
+			  	<%= image_tag @article.header_image.url(:large), class: "cropped-image-md" %>
+			</p>
+			<p>
+			  	<%= link_to 'remove', {action: :remove_header_image, id: @article.id}, method: :patch %>
+			</p>
+		<% else %>
+			<p>
+				No Header Image
+			</p>
+		<% end %>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-lg-8">
+		<p>
+			<strong>Content:</strong>
+		</p>
+		<p>
+			<%= raw @article.content %>
+		</p>
+	</div>	
+</div>

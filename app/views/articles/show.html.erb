@@ -1,0 +1,40 @@
+<div class="row">
+	<div class="col-lg-7 col-lg-offset-1">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="main-article-title extra-large-title"><%= @article.title %></h1>
+				<h3 class="spread-out">Subtitle goes here</h3>
+				 <div class="row">
+			        <div class="col-sm-8">
+			        <h5 class="text-left extra-small">
+			          <i><%= @article.user.full_name %></i> - <span class="text-muted"><%= @article.created_at.strftime("%e.%-m.%y")%></span>
+			        </h5>   
+			        </div>
+			        <div class="col-sm-3">
+			          <%= render 'partials/social_media_toolkit' %>
+			        </div>
+			    </div>
+			</div> 	
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="col-md-12">
+				<%= image_tag @article.header_image.url(:large), class: "main-article-image cropped-image-lg" %>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<p><%= raw @article.content %></p>
+			</div>
+		</div>
+		
+    </div>
+
+	<div class="col-lg-4">
+		<%= render 'partials/more_articles' %>
+	</div>
+
+</div>
