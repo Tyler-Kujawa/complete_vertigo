@@ -1,16 +1,6 @@
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.newest-article-container{}
-
 .main-article-image-container{
 	margin: 0 auto;
 	width: 450px;
-}
-
-.main-article-image{
-	
 }
 
 .small-date-and-publisher{
