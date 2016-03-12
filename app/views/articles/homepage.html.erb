@@ -63,32 +63,41 @@
       <hr>
 
       <div class="row">
-        <div class="new-issue">
-          <div class="col-xs-4"> <%= image_tag "http://placehold.it/125x160" %></div>
-          <div class="col-xs-8">
-            <h5 class="new-issue-titler">New Issue Title</h5>
-            <p class="text-center">
-  Brute salutatus his eu, cum ne quaestio abhorreant. Ne qui duis laudem, eum id graecis nostrum.</p>
-            <h5 class="small-date-and-publisher">
-              <%= @newest_article.user.full_name %> - <span class="text-muted "><%= @newest_article.created_at.strftime("%e.%-m.%y")%></span>  
+        <div class="col-sm-5">
+          <%= image_tag "http://placehold.it/125x160" %>
+        </div>
+
+        <div class="col-sm-7">
+          <div class="new-issue">
+            <h5 class="new-issue-title">New Issue!</h5>
+            <p>Brute salutatus his eu, cum ne quaestio abhorreant. Ne qui duis laudem, eum id graecis nostrum.</p>
+            
+            <h5 class="small-date-and-publisher in-well">
+              <span class="special-text-in-well"><i><%= @newest_article.user.full_name %></i></span> - <span class="text-muted"><%= @newest_article.created_at.strftime("%e.%-m.%y")%></span>  
             </h5>
           </div>
         </div>
       </div>
 
-       <div class="row">
-        <div class="new-issue">
-          <div class="col-xs-4"> <%= image_tag "http://placehold.it/125x160" %></div>
-          <div class="col-xs-8">
-            <h5 class="new-issue-title">New Issue Title</h5>
-            <p class="text-center">
-  Brute salutatus his eu, cum ne quaestio abhorreant. Ne qui duis laudem, eum id graecis nostrum.</p>
-            <h5 class="small-date-and-publisher">
-              <%= @newest_article.user.full_name %> - <span class="text-muted "><%= @newest_article.created_at.strftime("%e.%-m.%y")%></span>  
+      <br>
+
+      <div class="row">
+        <div class="col-sm-5">
+          <%= image_tag "http://placehold.it/125x160" %>
+        </div>
+
+        <div class="col-sm-7">
+          <div class="new-issue">
+            <h5 class="new-issue-title">New Issue!</h5>
+            <p>Brute salutatus his eu, cum ne quaestio abhorreant. Ne qui duis laudem, eum id graecis nostrum.</p>
+            
+            <h5 class="small-date-and-publisher in-well">
+              <span class="special-text-in-well"><i><%= @newest_article.user.full_name %></i></span> - <span class="text-muted "><%= @newest_article.created_at.strftime("%e.%-m.%y")%></span>  
             </h5>
           </div>
         </div>
       </div>
+
 
       <p class="text-right"><a class="btn btn-default">See More</a></p>
 

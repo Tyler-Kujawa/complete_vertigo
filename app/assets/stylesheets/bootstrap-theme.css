@@ -60,6 +60,12 @@ h6{
 	color: rgb(58,60,53);
 }
 
+.small-date-and-publisher{
+	font-size:12px;
+	margin: 0 0 10px 0;
+}
+
+
 p{
 	color: rgb(58,60,53);
 	margin: 10px 0 0 0;

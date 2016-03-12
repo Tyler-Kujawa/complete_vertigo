@@ -41,3 +41,11 @@
 .well .help-block{
 	color: rgb(255, 137, 42);
 }
+
+.special-text-in-well{
+	color: rgb(54,108,135);
+}
+
+.in-well{
+	margin: 5px 0 0 0;
+}
