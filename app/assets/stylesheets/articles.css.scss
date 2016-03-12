@@ -1,3 +1,93 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.newest-article-container{
+	
+}
+
+.main-article-image-container{
+	margin: 0 auto;
+	width: 450px;
+}
+
+.main-article-image{
+	
+}
+
+.small-date-and-publisher{
+	font-size:10px;
+	margin: 0 0 10px 0;
+}
+
+
+.main-article-title{
+	font-weight: bolder;
+}
+
+.main-article-title a{
+	color: rgb(58,60,53);
+}
+
+
+.main-article-title a:hover{
+	text-decoration: none;
+	color: rgb(78,80,73);
+}
+
+.main-article-title a:active{
+	text-decoration: none;
+	color: rgb(78,80,73);
+}
+
+.main-article-title a:visited{
+	text-decoration: none;
+	color: rgb(78,80,73);
+}
+
+.older-article-container{
+	margin: 0 auto;
+	width: 300px;
+	margin: 0 0 10px 0;
+}
+
+.older-article-container a{
+	color: rgb(58,60,53);
+}
+
+.older-article-container a:hover{
+	text-decoration: none;
+	color: rgb(78,80,73);
+}
+
+.older-article-container a:active{
+	text-decoration: none;
+	color: rgb(78,80,73);
+}
+
+.older-article-container a:visited{
+	text-decoration: none;
+	color: rgb(78,80,73);
+}
+
+.new-issues-header{
+	color: rgb(255,255,255);
+}
+
+.new-issue-title{
+	color: rgb(255,137,42);
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+.new-issue p{
+	color: rgb(255,255,255);
+	font-size:12px;
+	font-weight: lighter;
+	line-height: 150%;
+}
+
+.new-issue{
+	padding: 10px 0 0 0;
+	margin: 0 0 10px 0;
+}
