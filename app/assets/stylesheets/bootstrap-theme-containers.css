@@ -27,6 +27,12 @@
 	border: 2px solid rgb(137,40,23) 
 }
 
+.well .header{
+	color: rgb(255,255,255);
+	font-weight: bolder;
+	letter-spacing: 4px;
+}
+
 .well label{
 	color: rgb(255,255,255);
 	font-weight: lighter;
@@ -38,6 +44,7 @@
 /*	font-weight: lighter;*/
 }
 
+
 .well .help-block{
 	color: rgb(255, 137, 42);
 }
@@ -48,4 +55,24 @@
 
 .in-well{
 	margin: 5px 0 0 0;
+}
+
+
+.well-alt{
+	background-color: rgb(38,137,132);
+	border: 2px solid rgb(54,108,135) 	
+}
+
+.well-alt .header{
+	color: rgb(255,255,255);
+	letter-spacing: 4px;
+}
+
+.well-alt p{
+	color: rgb(255,255,255);
+}
+
+.well-alt .emphasis{
+	color: rgb(210, 174, 35);
+	letter-spacing: 2px;
 }

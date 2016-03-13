@@ -1,7 +1,7 @@
+<!-- START COLUMN 1 -->
 <div class="row">
   <div class="newest-article-container">
-    <div class="col-md-5">
-      
+    <div class="col-md-6">
       <div class="row">
         <div class="col-sm-11 col-sm-offset-1">
           <div class="main-article-image-container">
@@ -23,45 +23,65 @@
           <i><%= @newest_article.user.full_name %></i> - <span class="text-muted"><%= @newest_article.created_at.strftime("%e.%-m.%y")%></span>
         </h5>   
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
           <%= render 'partials/social_media_toolkit' %>
         </div>
       </div>
 
       <div class="row">
         <div class="col-sm-11 col-sm-offset-1">
-          <p><%= truncate(@newest_article.content, length: 450) %> <%= link_to "Read More", article_path(@newest_article) %> </p>
-          <br><hr class="full-length">
+          <p><%= truncate(@newest_article.content, length: 450) %> <%= link_to "Read More", article_path(@newest_article) %> </p>   
         </div>
       </div>
 
-
-
+      <br><br>
+      
+      <div class="row">
+        <div class="col-sm-11 col-sm-offset-1">
+          <h4 class="header">Archive Updates</h4>
+          <ul class="update-column-list">
+            <li>Place for update one to go</li>
+            <li>Place for update to go</li>
+            <li>Place for update to go</li>
+            <li>Place for update to go</li>
+            <li>Place for update to go</li>
+            <li>Place for update to go</li>
+          </ul>
+          <%= link_to("Go to Archive", "#") %>
+        </div>
+      </div>
     </div>
   </div>
+<!-- END COLUMN 1 -->
 
-
+<!-- START COLUMN 2 -->
   <div class="col-md-3">
     <% @articles.each do |article| %>
       <div class="older-article-container">
         <div class="older-article-container-image">
           <%= link_to(image_tag(article.header_image.url(:large), class: "older-article-image cropped-image-md"), article_path(article)) %>
         </div>
-        <h4 class=><%=link_to article.title, "#" %></h4>
+        <h4 class=><%=link_to article.title, article_path(article) %></h4>
         <h5 class="small-date-and-publisher">
           <%= article.user.full_name %> - <span class="text-muted "><%= article.created_at.strftime("%e.%-m.%y")%></span>  
         </h5>
       </div>
     <% end %>
-    <hr class="full-length">
+    
+    <br>
+
     <%=link_to("See More", articles_path) %>
   </div>
+<!-- END COLUMN 2 -->
 
-  <div class="col-md-4">
+<!-- COLUMN 3 -->
+  <div class="col-md-3">
     <div class="well">
-      <h4 class="new-issues-header text-center">Newest Releases<h4>
-      <hr>
+      <h4 class="header text-center">Newest Releases<h4>
 
+      <hr>
+      <br>
+      
       <div class="row">
         <div class="col-sm-5">
           <%= image_tag "http://placehold.it/125x160" %>
@@ -99,8 +119,51 @@
       </div>
 
 
+      <br>
+
+      <div class="row">
+        <div class="col-sm-5">
+          <%= image_tag "http://placehold.it/125x160" %>
+        </div>
+        <div class="col-sm-7">
+          <div class="new-issue">
+            <h5 class="new-issue-title">New Issue!</h5>
+            <p>Brute salutatus his eu, cum ne quaestio abhorreant. Ne qui duis laudem, eum id graecis nostrum.</p>
+            
+            <h5 class="small-date-and-publisher in-well">
+              <span class="special-text-in-well"><i><%= @newest_article.user.full_name %></i></span> - <span class="text-muted "><%= @newest_article.created_at.strftime("%e.%-m.%y")%></span>  
+            </h5>
+          </div>
+        </div>
+      </div>
+
+
       <p class="text-right"><a class="btn btn-default">See More</a></p>
 
     </div>
+
+    <div class="well well-alt">
+      <div class="form-group">
+        <%= form_tag("subscriber/register", method: "get") do %>
+          <h1 class="text-center header">
+            <%= label_tag(:q, "Subscribe") %>
+          </h1>
+
+          <hr>
+
+          <p class="text-center emphasis">
+            Get updates whenever updates are to be had.
+          </p>
+          <p class="center-box">
+            <%= text_field_tag(:q, "", class: "text-center form-control", placeholder: "Email") %>
+          </p>
+          <p class="center-box">
+            <%= submit_tag("Do It", class: "btn btn-primary")%>
+          </p>
+        <% end %>
+      </div>
+    </div>
+
   </div>
+  <!-- END COLUMN 3 -->
 </div>

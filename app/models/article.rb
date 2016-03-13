@@ -6,6 +6,6 @@ class Article < ActiveRecord::Base
 
 
 	def self.most_recent
-		order("created_at desc").limit("4")
+		order("created_at desc").limit(5)
 	end
 end

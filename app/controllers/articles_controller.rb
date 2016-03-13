@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 	before_action :go_away_hacker, only: [:edit, :update, :destroy]
   def homepage
   	articles = Article.most_recent
-  	@newest_article = articles.last
+  	@newest_article = articles.first
   	@articles = articles.reject {|a| a.eql?(@newest_article)}
   end
 

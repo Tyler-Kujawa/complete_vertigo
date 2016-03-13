@@ -60,6 +60,10 @@ h6{
 	color: rgb(58,60,53);
 }
 
+.header{
+	font-weight: bold;
+}
+
 .small-date-and-publisher{
 	font-size:12px;
 	margin: 0 0 10px 0;
@@ -137,6 +141,12 @@ small{
 	border-top: 5px solid rgb(137, 40, 23);
 }
 
+.center-box{
+	margin: auto;
+	width: 50%;
+
+}
+
 .table > thead > tr > td.muted,
 .table > tbody > tr > td.muted,
 .table > tfoot > tr > td.muted,
@@ -207,18 +217,18 @@ small{
 }
 
 .cropped-image-lgr{
-	width:450px;
-	height: 350px;
+	width: 815px;
+	height: 395px;
 }
 
 .cropped-image-lg{
-	width: 375px;
-	height: 250px;
+	width: 695px;
+	height: 370px;
 }
 
 .cropped-image-md{
-	width: 250px;
-	height: 150px;
+	width: 340px;
+	height: 210px;
 }
 
 .cropped-image-sm{
@@ -230,4 +240,14 @@ small{
 	height: 25px;
 	width: 25px;
 	margin: 0 5px 10px 0;
+	float: right;
+}
+
+.update-column-list{
+	-moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
 }
