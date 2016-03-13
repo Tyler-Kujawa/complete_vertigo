@@ -217,23 +217,25 @@ small{
 }
 
 .cropped-image-lgr{
-	width: 815px;
-	height: 395px;
+	width:100%;
+	width:100%;
 }
 
 .cropped-image-lg{
-	width: 695px;
-	height: 370px;
+	width:100%;
+	width:100%;
+	min-width: 555px;
+	min-height: 285px;
 }
 
 .cropped-image-md{
-	width: 340px;
-	height: 210px;
+	width:100%;
+	width:100%;
 }
 
 .cropped-image-sm{
-	width: 75px;	
-	height: 100px;
+	width:100%;
+	width:100%;
 }
 
 .social-media-icon{
