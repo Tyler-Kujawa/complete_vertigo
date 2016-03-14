@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
 	belongs_to :user
 
-	has_attached_file :header_image, styles: { large: "300x300>", medium: "250x150", thumb: "100x100>" }
+	has_attached_file :header_image, styles: { large: "700x412>", medium: "250x150", thumb: "100x100>" }
 	validates_attachment_content_type :header_image, content_type: /\Aimage\/.*\Z/
 
 

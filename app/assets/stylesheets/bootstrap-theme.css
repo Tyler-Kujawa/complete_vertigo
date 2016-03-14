@@ -218,24 +218,30 @@ small{
 
 .cropped-image-lgr{
 	width:100%;
-	width:100%;
+	height:100%;
 }
 
 .cropped-image-lg{
 	width:100%;
-	width:100%;
+	height:100%;
 	min-width: 555px;
 	min-height: 285px;
 }
 
 .cropped-image-md{
 	width:100%;
-	width:100%;
+	height:100%;
 }
 
 .cropped-image-sm{
 	width:100%;
-	width:100%;
+	height:100%;
+}
+
+.cropped-image-sm-cover{
+	margin: 30px 0 0 0;
+	width: 100%;
+	/*height: 100%*/
 }
 
 .social-media-icon{
