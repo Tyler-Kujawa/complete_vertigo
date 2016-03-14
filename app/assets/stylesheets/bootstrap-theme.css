@@ -141,10 +141,9 @@ small{
 	border-top: 5px solid rgb(137, 40, 23);
 }
 
-.center-box{
-	margin: auto;
-	width: 50%;
-
+.center-button{
+	margin:auto;
+	width:42%;
 }
 
 .table > thead > tr > td.muted,
@@ -258,4 +257,13 @@ small{
     -webkit-column-gap: 20px;
     column-count: 2;
     column-gap: 20px;
+}
+
+.subscribe-email-message{
+	margin: 0 0 10px 0;
+}
+
+.subscribe-email-field{
+	margin: 0 auto 20px auto;
+	width: 80%;
 }

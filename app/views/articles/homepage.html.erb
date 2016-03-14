@@ -154,13 +154,15 @@
 
           <hr>
 
-          <p class="text-center emphasis">
+          <p class="text-center emphasis subscribe-email-message">
             Get updates whenever updates are to be had.
           </p>
-          <p class="center-box">
-            <%= text_field_tag(:q, "", class: "text-center form-control", placeholder: "Email") %>
+          
+          <p>
+            <%= text_field_tag(:q, "", class: "text-center form-control subscribe-email-field", placeholder: "Email") %>
           </p>
-          <p class="center-box">
+          
+          <p class="center-button">
             <%= submit_tag("Do It", class: "btn btn-primary")%>
           </p>
         <% end %>
