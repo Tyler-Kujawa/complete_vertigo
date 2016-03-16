@@ -16,6 +16,10 @@
     <%= f.text_field :title, class: "col-sm-2 form-control", placeholder: "Enter article title" %>
   </div>
   <div class="form-group">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle, class: "col-sm-2 form-control", placeholder: "Enter article subtitle" %>
+  </div>
+  <div class="form-group">
     <%= f.label :user_id %> 
     <%= f.collection_select :user_id, User.all, :id, :full_name, {}, {class: "col-sm-2 form-control"} %>
   </div>
