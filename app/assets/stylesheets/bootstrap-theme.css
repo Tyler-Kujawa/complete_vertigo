@@ -53,7 +53,7 @@ h4{
 
 h5{
 	color: rgb(58,60,53);
-	margin: 5px 0 5px 0;
+	margin: 5px 0 0 0;
 }
 
 h6{
@@ -141,10 +141,10 @@ small{
 	border-top: 5px solid rgb(137, 40, 23);
 }
 
-.center-button{
-	margin:auto;
-	width:42%;
-}
+/*.center-button{
+	margin: 0 auto 0 auto;
+	width: 100%;
+}*/
 
 .table > thead > tr > td.muted,
 .table > tbody > tr > td.muted,
@@ -246,7 +246,11 @@ small{
 .social-media-icon{
 	height: 25px;
 	width: 25px;
-	margin: 0 5px 10px 0;
+	margin: 0 15px 15px 0;
+	float: right;
+}
+
+.comment-count{
 	float: right;
 }
 
@@ -266,4 +270,9 @@ small{
 .subscribe-email-field{
 	margin: 0 auto 20px auto;
 	width: 95%;
+}
+
+.glyphicon{
+	width: 25px;
+	height: 25px;
 }
