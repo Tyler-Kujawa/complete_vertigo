@@ -6,15 +6,14 @@
 				<%= link_to("Home", root_path) %>
 
 				<h1 class="main-article-title extra-large-title"><%= @article.title %></h1>
-				<h3 class="spread-out">Subtitle goes here</h3>
+				<h3 class="spread-out"><%= @article.subtitle %></h3>
 				 <div class="row">
-			        <div class="col-sm-6">
-			        <h5 class="text-left extra-small">
-			          <i><%= @article.user.full_name %></i> - <span class="text-muted"><%= @article.created_at.strftime("%e.%-m.%y")%></span>
-			        </h5>   
-			        </div>
-			        <div class="col-sm-6">
-			          <%= render 'partials/social_media_toolkit' %>
+			        <div class="col-sm-2 col-sm-offset-10">
+			          <div class="comment-count">
+				            <%= link_to "0 Comments", 
+				                article_path(@article, :anchor => "disqus_thread"), 
+				                :"data-disqus-identifer" => @article.id %>
+				          </div>
 			        </div>
 			    </div>
 			</div> 	
@@ -32,6 +31,10 @@
 			<div class="col-md-11 col-sm-offset-1">
 				<div class="article-content">
 					<p><%= raw @article.content %></p>
+					<br>
+					<h5 class="text-left extra-small">
+			          - <i><%= @article.user.full_name %></i> - <span class="text-muted"><%= @article.created_at.strftime("%e.%-m.%y")%></span>
+			        </h5>   
 				</div>
 
 				<div class="article-comment-section">

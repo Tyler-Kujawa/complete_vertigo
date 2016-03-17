@@ -32,6 +32,11 @@
     <%= f.file_field :header_image, class: "filestyle", data:{"buttonName" => "btn-default" } %>
   </div>
 
+ <div class="form-group">
+    <%= f.label :summary %> 
+    <%= f.text_area :summary %>
+  </div>
+
   <div class="form-group">
     <%= f.label :content %> 
     <%= f.text_area :content %>

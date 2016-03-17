@@ -18,14 +18,14 @@
       </div>
       
       <div class="row">
-        <div class="col-sm-7">
+        <div class="col-sm-9">
         <h5 class="text-left extra-small">
           <i><%= @newest_article.user.full_name %></i> - <span class="text-muted"><%= @newest_article.created_at.strftime("%e.%-m.%y")%></span>
         </h5>   
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-3">
           <div class="comment-count">
-            <%= link_to "", 
+            <%= link_to "0 Comments", 
                 article_path(@newest_article, :anchor => "disqus_thread"), 
                 :"data-disqus-identifer" => @newest_article.id %>
           </div>
