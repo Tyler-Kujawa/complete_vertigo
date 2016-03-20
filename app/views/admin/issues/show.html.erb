@@ -1,0 +1,102 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="row">
+	<div class="col-lg-12">
+		<h1>Info for Series Title #<%= @issue.issue_number %></h1>
+		<%= link_to 'Edit', edit_admin_issue_path(@issue) %> |
+		<%= link_to 'Back', admin_issues_path %>
+	</div>
+</div>
+
+<hr class="full-length">
+<br>
+
+<div class="row">
+	<div class="col-lg-12">
+		<p>
+	  		<strong>Series:</strong> ...series...
+		</p>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-lg-12">
+		<p>
+	  		<strong>Issue Number:</strong> <%= @issue.issue_number %>
+		</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<p>
+	  		<strong>Title:</strong> <%= @issue.title %>
+		</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<p>
+		  <strong>Author:</strong> <%= @issue.user ? @issue.user.full_name : "No associated author."%>
+		</p>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<p>
+			<strong>Cover Image:</strong>
+		</p>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-lg-2">
+		
+		<% if !@issue.cover_image.url.eql?("/header_images/original/missing.png") %>
+			<p>
+			  	<%= image_tag @issue.cover_image.url(:medium), class: "cropped-image-md" %>
+			</p>
+			<p>
+			  	<%= link_to 'remove', {action: :remove_cover_image, id: @issue.id}, method: :patch %>
+			</p>
+		<% else %>
+			<p>
+				No Header Image
+			</p>
+		<% end %>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-lg-8">
+		<p>
+			<strong>Summary:</strong>
+		</p>
+		<p>
+			<%= raw @issue.summary %>
+		</p>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-lg-8">
+		<p>
+			<strong>Content:</strong>
+		</p>
+		<p>
+			<%= raw @issue.content %>
+		</p>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-lg-8">
+		<p>
+			<strong>Rating:</strong> <%= @issue.rating %>
+		</p>
+	</div>	
+</div>

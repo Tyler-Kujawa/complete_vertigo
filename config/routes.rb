@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-	
   get 'home' => 'articles#homepage'
-	resources :articles
-
 	root 'articles#homepage'
+
+  resources :articles
+  resources :issues
 
 	namespace :admin do
 		get 'log_in' => 'sessions#new'
@@ -13,8 +13,10 @@ Rails.application.routes.draw do
 		
 		get '/' => 'dashboard#index' 
     patch 'article/remove_header_image/:id' => 'articles#remove_header_image'
+    patch 'issue/remove_cover_image/:id' => 'issues#remove_cover_image'
 
 		resources :articles
+    resources :issues
 		resources :users
 		resources :sessions 
 	end

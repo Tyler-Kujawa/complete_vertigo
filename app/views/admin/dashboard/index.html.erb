@@ -39,9 +39,17 @@
 	<div class="col-md-3">
 		<div class="well">
 			<h4>Issues</h4>
-			<p>
-				<strong>Count: </strong> coming soon
-			</p>
+			<% if Issue.all.count > 0 %>
+				<p>
+					<strong>Count: </strong> <%= link_to(Issue.count('title', distinct: true), admin_issues_path) %>
+				</p>
+				<p>
+					<strong>Most Recent: </strong> <%= link_to(Issue.order("created_at").last.title, admin_issue_path(Issue.order("created_at").last)) %>
+				</p>
+			<% else %>
+				<p>No Articles created yet. Get to work</p>
+				<%= link_to("Create Issue", new_admin_issue_path) %> 
+			<% end %>
 		</div>
 	</div>
 </div>

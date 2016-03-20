@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   	articles = Article.most_recent
   	@newest_article = articles.first
   	@articles = articles.reject {|a| a.eql?(@newest_article)}
+    @new_issues = Issue.most_recent
   end
 
   def index

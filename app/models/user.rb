@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 	validates_uniqueness_of :email
 	
 	has_many :articles
+	has_many :issues
 	
 	attr_accessor :full_name
 	

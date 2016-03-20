@@ -25,9 +25,7 @@
         </div>
         <div class="col-sm-3">
           <div class="comment-count">
-            <%= link_to "0 Comments", 
-                article_path(@newest_article, :anchor => "disqus_thread"), 
-                :"data-disqus-identifer" => @newest_article.id %>
+          <a href="<%= url_for(@newest_article) %>#disqus_thread"></a>
           </div>
         </div>
       </div>
@@ -70,7 +68,9 @@
         </div>
         <h4 class=><%=link_to article.title, article_path(article) %></h4>
         <h5 class="small-date-and-publisher">
-          <%= article.user.full_name %> - <span class="text-muted "><%= article.created_at.strftime("%e.%-m.%y")%></span>  
+          <%= article.user.last_name %>-
+          <span class="text-muted "><%= article.created_at.strftime("%e.%-m.%y")%></span>-
+          <span><a href="<%= url_for(article) %>#disqus_thread">0 Comments</a></span>  
         </h5>
       </div>
     <% end %>
@@ -89,61 +89,27 @@
       <hr>
       <br>
 
-      <div class="row">
-        <div class="col-sm-5">
-          <%= image_tag "http://placehold.it/125x160", class: "cropped-image-sm-cover" %>
-        </div>
-
-        <div class="col-sm-7">
-          <div class="new-issue">
-            <h5 class="new-issue-title">New Issue!</h5>
-            <p>Brute salutatus his eu, cum ne quaestio abhorreant. Ne qui duis laudem, eum id graecis nostrum.</p>
-            
-            <h5 class="small-date-and-publisher in-well">
-              <span class="special-text-in-well"><i><%= @newest_article.user.full_name %></i></span> - <span class="text-muted"><%= @newest_article.created_at.strftime("%e.%-m.%y")%></span>  
-            </h5>
+      <% @new_issues.each do |issue| %>
+        <div class="row">
+          <div class="col-sm-4">
+            <%= image_tag issue.cover_image.url, class: "cropped-image-sm-cover" %>
           </div>
+
+           <div class="col-sm-8">
+            <div class="new-issue">
+              <h5 class="new-issue-title">...series... <%= issue.issue_number %></h5>
+              <p><%= truncate(issue.summary, length: 75) %></p>
+              
+              <h5 class="small-date-and-publisher in-well">
+                <span class="special-text-in-well"><i><%= issue.user.last_name %></i></span> - <span class="text-muted"><%= issue.created_at.strftime("%e.%-m.%y")%></span>  
+              </h5>
+            </div>
+          </div>
+
         </div>
-      </div>
+      <% end %>
 
       <br>
-
-      <div class="row">
-        <div class="col-sm-5">
-          <%= image_tag "http://placehold.it/125x160", class: "cropped-image-sm-cover" %>
-        </div>
-
-        <div class="col-sm-7">
-          <div class="new-issue">
-            <h5 class="new-issue-title">New Issue!</h5>
-            <p>Brute salutatus his eu, cum ne quaestio abhorreant. Ne qui duis laudem, eum id graecis nostrum.</p>
-            
-            <h5 class="small-date-and-publisher in-well">
-              <span class="special-text-in-well"><i><%= @newest_article.user.full_name %></i></span> - <span class="text-muted "><%= @newest_article.created_at.strftime("%e.%-m.%y")%></span>  
-            </h5>
-          </div>
-        </div>
-      </div>
-
-
-      <br>
-
-      <div class="row">
-        <div class="col-sm-5">
-          <%= image_tag "http://placehold.it/125x160", class: "cropped-image-sm-cover" %>
-        </div>
-        <div class="col-sm-7">
-          <div class="new-issue">
-            <h5 class="new-issue-title">New Issue!</h5>
-            <p>Brute salutatus his eu, cum ne quaestio abhorreant. Ne qui duis laudem, eum id graecis nostrum.</p>
-            
-            <h5 class="small-date-and-publisher in-well">
-              <span class="special-text-in-well"><i><%= @newest_article.user.full_name %></i></span> - <span class="text-muted "><%= @newest_article.created_at.strftime("%e.%-m.%y")%></span>  
-            </h5>
-          </div>
-        </div>
-      </div>
-
 
       <p class="text-right"><a class="btn btn-default">See More</a></p>
 

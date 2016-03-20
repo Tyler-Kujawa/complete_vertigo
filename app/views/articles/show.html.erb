@@ -9,11 +9,6 @@
 				<h3 class="spread-out"><%= @article.subtitle %></h3>
 				 <div class="row">
 			        <div class="col-sm-2 col-sm-offset-10">
-			          <div class="comment-count">
-				            <%= link_to "0 Comments", 
-				                article_path(@article, :anchor => "disqus_thread"), 
-				                :"data-disqus-identifer" => @article.id %>
-				          </div>
 			        </div>
 			    </div>
 			</div> 	

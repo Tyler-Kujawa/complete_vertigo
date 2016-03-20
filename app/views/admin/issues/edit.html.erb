@@ -1,0 +1,6 @@
+<h1><strong>Issue Info</strong> : Series #<%= @issue.issue_number %></h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', [:admin, @issue] %> |
+<%= link_to 'Back', admin_issues_path %>

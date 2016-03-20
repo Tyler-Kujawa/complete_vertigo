@@ -1,0 +1,58 @@
+<%= form_for([:admin, @issue], html: { class: "form-horizontal", multipart: "true"}) do |f| %>
+  <% if @issue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@issue.errors.count, "error") %> prohibited this issue from being saved:</h2>
+
+      <ul>
+      <% @issue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :issue_number %>
+    <%= f.text_field :issue_number, class: "col-sm-2 form-control", placeholder: "Enter issue number" %>
+  </div>
+    <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "col-sm-2 form-control", placeholder: "Enter issue title" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :publication_date %>
+    <%= f.date_field :publication_date, class: "col-sm-2 form-control", placeholder: "Enter issue title" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :user_id %> 
+    <%= f.collection_select :user_id, User.all, :id, :full_name, {}, {class: "col-sm-2 form-control"} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cover_image %>
+    <% if @issue.cover_image.exists? %>
+      <p><%= image_tag(@issue.cover_image.url(:thumb)) %></p>
+      <p><%= link_to 'remove', {action: :remove_cover_image, id: @issue.id}, method: :patch %></p>
+    <% end %>
+    <%= f.file_field :cover_image, class: "filestyle", data:{"buttonName" => "btn-default" } %>
+  </div>
+
+  
+  <div class="form-group">
+    <%= f.label :rating %> 
+    <%= f.text_field :rating, class: "col-sm-2 form-control", placeholder: "Enter your rating (1 - 10)" %>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :summary %> 
+    <%= f.text_area :summary %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content %> 
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "submit", class: "btn btn-primary"%>
+  </div>
+<% end %>
